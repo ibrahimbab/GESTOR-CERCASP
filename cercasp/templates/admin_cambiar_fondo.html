@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Cambiar fondo/logo{% endblock %}
+{% block content %}
+<h2>Cambiar fondo/logo del gestor</h2>
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="logo">Selecciona una imagen (png, jpg):</label>
+        <input type="file" name="logo" id="logo" class="form-control" accept="image/*">
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar logo</button>
+</form>
+{% endblock %}

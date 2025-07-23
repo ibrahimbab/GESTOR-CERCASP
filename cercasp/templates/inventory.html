@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Inventario Médico{% endblock %}
+{% block content %}
+<h2>Inventario Médico</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Expiración</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.expiration_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('inventory.add_inventory') }}" class="btn btn-primary">Agregar Item</a>
+{% endblock %}

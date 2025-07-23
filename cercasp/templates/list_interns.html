@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Internos{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">Lista de Internos</h2>
+    <a href="{{ url_for('interns.add_intern') }}" class="btn btn-primary btn-lg shadow">+ Nuevo Interno</a>
+</div>
+<div class="table-responsive rounded-4 shadow">
+<table class="table table-hover align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Género</th>
+            <th>Ingreso</th>
+            <th>Sustancias</th>
+            <th>Contacto</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for intern in interns %}
+        <tr>
+            <td>{{ intern.id }}</td>
+            <td>{{ intern.name }}</td>
+            <td>{{ intern.age }}</td>
+            <td>{{ intern.gender }}</td>
+            <td>{{ intern.entry_date }}</td>
+            <td>{{ intern.initial_drug }}</td>
+            <td>
+                {% if intern.get_contact() %}
+                    {{ intern.get_contact()[0] }}<br><small>{{ intern.get_contact()[1] }}</small>
+                {% else %}-{% endif %}
+            </td>
+            <td>
+                <a href="{{ url_for('interns.edit_intern', id=intern.id) }}" class="btn btn-sm btn-outline-primary">Editar</a>
+                <a href="{{ url_for('progress.list_progress', id=intern.id) }}" class="btn btn-sm btn-outline-success">Progreso</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="8" class="text-center">No hay internos registrados.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

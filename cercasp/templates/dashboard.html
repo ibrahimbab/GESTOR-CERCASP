@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Dashboard</h2>
+<p>Total Internos: {{ total_interns }}</p>
+<p>Pagos Pendientes: {{ pending_payments }}</p>
+<p>Internos de Alto Riesgo: {{ high_risk }}</p>
+<img src="data:image/png;base64,{{ chart }}" alt="Gráfico de Puntuaciones">
+{% endblock %}

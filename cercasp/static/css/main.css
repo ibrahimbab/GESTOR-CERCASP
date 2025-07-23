@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #101014;
+    background-image: url('/static/img/logo_cercasp.png');
+    background-repeat: no-repeat;
+    background-position: center 120px;
+    background-attachment: fixed;
+    background-size: 28vw auto;
+    min-height: 100vh;
+}
+
+
+.alert {
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, #232323 60%, #1a1a1a 100%);
+    color: #f8f8f8;
+    border-left: 6px solid #bfa14a;
+}
+
+
+.table {
+    margin-top: 1rem;
+    background: rgba(16,16,20,0.98);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    color: #e0e0e0;
+}
+
+.table thead {
+    background: linear-gradient(90deg, #bfa14a 60%, #1e2a38 100%);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #181818;
+}
+
+
+.form-control, .btn, .table, .alert {
+    box-shadow: none !important;
+}
+
+
+.btn-primary, .btn-success, .btn-warning, .btn-danger {
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #bfa14a 60%, #1e2a38 100%);
+    color: #fff;
+    border: 1px solid #bfa14a;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #a88d36 60%, #1e2a38 100%);
+    color: #fff;
+}
+
+.btn-success {
+    background: #1e2a38;
+    color: #bfa14a;
+    border: 1px solid #bfa14a;
+}
+.btn-success:hover {
+    background: #bfa14a;
+    color: #fff;
+}
+
+
+.badge.bg-warning {
+    background: #ffe082 !important;
+    color: #7c6f00 !important;
+}
+.badge.bg-success {
+    background: #4caf50 !important;
+}
+.badge.bg-info {
+    background: #1e2a38 !important;
+    color: #bfa14a !important;
+    font-weight: 600;
+}
+
+
+main.container {
+    background: rgba(24,24,28,0.98);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+    padding: 2.5rem 2.5vw;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #e0e0e0;
+}
+
+footer {
+    letter-spacing: 1px;
+    background: #181818;
+    color: #bfa14a;
+    border-top: 2px solid #bfa14a;
+}

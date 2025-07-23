@@ -1,0 +1,23 @@
+flask==3.0.3
+flask-sqlalchemy==3.1.1
+flask-migrate==4.0.7
+flask-wtf==1.2.1
+flask-caching==2.3.0
+flask-login==0.6.3
+flask-limiter==3.8.0
+flask-restful==0.3.10
+flask-paginate==2024.4.12
+flask-babel==4.0.0
+wtforms==3.1.2
+reportlab==4.2.2
+torch
+scikit-learn
+numpy
+matplotlib
+pandas
+cryptography
+apscheduler
+pyotp
+redis  # Si usas cache Redis
+logging
+

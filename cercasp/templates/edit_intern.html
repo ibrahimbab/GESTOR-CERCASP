@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Editar Interno{% endblock %}
+{% block content %}
+<h2>Editar Interno</h2>
+<form method="post">
+    {{ form.hidden_tag() }}
+    {% for field in form if field.name != 'csrf_token' and field.name != 'submit' %}
+    <div class="form-group">
+        {{ field.label }} {{ field(class='form-control') }}
+    </div>
+    {% endfor %}
+    {{ form.submit(class='btn btn-primary') }}
+</form>
+{% endblock %}
